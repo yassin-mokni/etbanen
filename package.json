@@ -1,0 +1,24 @@
+{
+  "name": "etbanen",
+  "version": "1.0.0",
+  "description": "it's kind of marketplace for Homemade food",
+  "author": "Yassine Mokni",
+  "private": true,
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm build --prefix client"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "~4.16.0",
+    "mongoose": "^5.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
